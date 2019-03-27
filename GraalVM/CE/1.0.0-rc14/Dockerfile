@@ -1,12 +1,4 @@
-# LICENSE UPL 1.0
-#
-# Copyright (c) 2015 Oracle and/or its affiliates. All rights reserved.
-#
-
 FROM oraclelinux:7-slim
-
-# Note: If you are behind a web proxy, set the build variables for the build:
-#       E.g.:  docker build --build-arg "https_proxy=..." --build-arg "http_proxy=..." --build-arg "no_proxy=..." ...
 
 ARG GRAAL_VERSION=1.0.0-rc14
 ENV LANG=en_US.UTF-8
