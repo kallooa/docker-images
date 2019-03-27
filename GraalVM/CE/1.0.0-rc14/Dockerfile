@@ -37,8 +37,6 @@ ADD gu-wrapper.sh /usr/local/bin/gu
 RUN set -eux \
     && curl --fail --silent --location --retry 3 ${GRAALVM_PKG} \
     | gunzip | tar x -C /opt/ \
-
-    # Set alternative links
     && mkdir -p "/usr/java" \
     && ln -sfT "$JAVA_HOME" /usr/java/default \
     && ln -sfT "$JAVA_HOME" /usr/java/latest \
@@ -47,7 +45,6 @@ RUN set -eux \
         [ ! -e "/usr/bin/$base" ]; \
         alternatives --install "/usr/bin/$base" "$base" "$bin" 20000; \
     done \
-
     && chmod +x /usr/local/bin/gu
 
 CMD java -version
