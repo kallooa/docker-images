@@ -1,0 +1,9 @@
+plotly
+odbc
+tidyverse
+dbplyr
+DBI
+gtools
+lubridate
+zoo
+data.table
